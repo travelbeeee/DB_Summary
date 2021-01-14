@@ -1,0 +1,8 @@
+mySQL
+
+https://zetawiki.com/wiki/MySQL_%ED%85%8C%EC%9D%B4%EB%B8%94_%EC%83%9D%EC%84%B1_CREATE_TABLE
+
+0) mySQL 기본 자료형
+1) 테이블 생성
+2) 테이블 삭제
+3) 테이블 변경

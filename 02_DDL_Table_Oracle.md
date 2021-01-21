@@ -11,7 +11,7 @@ CREATE TABLE 테이블명 (
 	열 정의1,
 	열 정의2,
 	...
-)
+);
 ```
 
 CREATE 명령어를 이용하면 객체를 생성할 수 있습니다. TABLE을 생성하기 위해서는 CREATE TABLE 과 테이블명, 테이블의 열을 지정해주면 됩니다.
@@ -26,9 +26,7 @@ DEFAULT는 기본값을 지정해주는 속성이고, NULL | NOT NULL 은 NULL �
 
 <br>
 
-### 2) 데이터 타입 
-
-#### 2-1) Oracle 데이터 타임
+### 2) 데이터 타입
 
 먼저, Oracle 에서 지원해주는 데이터 타입 중 자주 쓰이는 데이터 타입부터 알아보겠습니다.
 
@@ -89,3 +87,62 @@ BFILE // 최대 4GB, 바이너리 파일 저장
 ```
 
 대용량 객체를 표현하는 자료형은 위와 같습니다.
+
+<br>
+
+### 3) 테이블 삭제
+
+테이블을 삭제하는 명령어는 다음과 같습니다.
+
+```sql
+DROP TABLE 테이블명 [CASCADE CONSTRAINTS];
+```
+
+DROP 이라는 명령어를 이용하여 테이블을 삭제할 수 있고, CASCADE CONSTRAINTS 속성을 지정하면 삭제가 되는 테이블과 참조관계나 제약관계가 있는 하위 테이블까지 모두 삭제합니다.
+
+<br>
+
+### 4) 테이블 변경
+
+ALTER 명령어를 이용하면 테이블을 변경할 수 있습니다.
+
+#### 4-1) 테이블 컬럼 추가하기
+
+```sql
+ALTER TABLE 테이블명 ADD (열이름 자료형 [DEFAULT 기본값] [NULL | NOT NULL]);
+```
+
+ALTER TABLE ADD 명령어를 이용하면 테이블에 컬럼을 추가할 수 있습니다.
+
+<br>
+
+#### 4-2) 테이블 컬럼 수정하기
+
+```sql
+ALTER TABLE 테이블명 MODIFY (열이름 자료형 [DEFAULT 기본값] [NULL | NOT NULL]);
+```
+
+ALTER TABLE MODIFY 명령어를 이용하면 테이블 컬럼의 이름을 제외하고 수정할 수 있습니다.
+
+<br>
+
+#### 4-3) 테이블 컬럼 이름 수정하기
+
+```sql
+ALTER TABLE 테이블명 RENAME COLUMN 원래열이름 TO 수정할열이름;
+```
+
+ALTER TABLE RENAME COLUMN 명령어를 이용하면 테이블 컬럼의 이름을 수정할 수 있습니다.
+
+<br>
+
+#### 4-4) 테이블 컬럼 삭제하기
+
+```sql
+ALTER TABLE 테이블명 DROP COLUMN 컬럼명;
+```
+
+ALTER TABLE DROP COLUMN 명령어를 이용하면 테이블 컬럼을 삭제할 수 있습니다.
+
+<br>
+

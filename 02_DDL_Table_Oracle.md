@@ -124,6 +124,10 @@ ALTER TABLE 테이블명 MODIFY (열이름 자료형 [DEFAULT 기본값] [NULL |
 
 ALTER TABLE MODIFY 명령어를 이용하면 테이블 컬럼의 이름을 제외하고 수정할 수 있습니다.
 
+```sql
+alter table writing modify (views default 0); // 예시 writing table의 views 열 Default수정
+```
+
 <br>
 
 #### 4-3) 테이블 컬럼 이름 수정하기

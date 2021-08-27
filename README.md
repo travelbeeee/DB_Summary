@@ -1,2 +1,2 @@
-# SQL_firstStep
-'SQL 첫걸음' 을 토대로 Oracle 과 MySQL 쿼리 문법에 대해서 정리하는 공간.
+##DataBase_Summary##
+'SQL 첫걸음' 책 내용 정리 및 DataBase 관련 공부 내용 정리하는 공간.
